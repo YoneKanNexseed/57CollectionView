@@ -16,7 +16,43 @@ class ViewController: UIViewController {
         "cat",
         "dog",
         "kan",
-        "kome"
+        "kome",
+        "cat",
+        "dog",
+        "kan",
+        "kome",
+        "cat",
+        "dog",
+        "kan",
+        "kome",
+        "cat",
+        "dog",
+        "kan",
+        "kome",
+        "cat",
+        "dog",
+        "kan",
+        "kome",
+        "cat",
+        "dog",
+        "kan",
+        "kome",
+        "cat",
+        "dog",
+        "kan",
+        "kome",
+        "cat",
+        "dog",
+        "kan",
+        "kome",
+        "cat",
+        "dog",
+        "kan",
+        "kome",
+        "cat",
+        "dog",
+        "kan",
+        "kome",
     ]
     
     override func viewDidLoad() {
@@ -50,5 +86,24 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         return cell
     }
     
+    
+}
+
+
+// COllectionViewのデザインを調整するための拡張
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        // 画面の幅を取得
+        // self.view.bounds.width : 画面の幅が取れてくる
+        let screenSize = self.view.bounds.width
+        
+        // 画面の幅の半分の幅を計算s
+        let cellSize = screenSize / 2 - 5
+        
+        return CGSize(width: cellSize, height: cellSize)
+        
+    }
     
 }
