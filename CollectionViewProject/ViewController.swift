@@ -82,10 +82,19 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
         imageView.image = UIImage(named: images[indexPath.row])
         
+        // セルの中のLabelをタグ番号で取得&文字の設定
+        let label = cell.contentView.viewWithTag(2) as! UILabel
+        label.text = "Hello World"
+        
         // 出来上がったセルを返す
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print("クリックされたよ")
+        
+    }
     
 }
 
